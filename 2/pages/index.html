@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filtrar números</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="menu">
+      <div class="marca"><strong>Práctica JS</strong><span>Proyecto 2</span></div>
+      <p class="menu-titulo">Datos</p>
+      <label for="inputNombre">Tu nombre (identifica el archivo)</label>
+      <input type="text" id="inputNombre" placeholder="Ej: Emanuel Pello" maxlength="30">
+      <input type="file" id="archivo" accept=".txt,text/plain" class="oculto">
+      <div class="botones">
+        <button id="btnElegir" class="accion">Elegir archivo .txt</button>
+        <button id="btnGuardar" disabled>Guardar resultado .txt</button>
+        <button id="btnDescargar" disabled>Descargar de nuevo</button>
+        <button id="btnReiniciar" class="secundario">Reiniciar</button>
+      </div>
+      <button id="btnTema" class="tema">Modo oscuro</button>
+    </aside>
+
+    <main class="contenido">
+      <h2 class="titulo-pagina">Filtrar números</h2>
+      <div id="mensaje" class="aviso">Subí un archivo .txt con números. Se buscan los que empiezan y terminan con el mismo dígito (525 sí, 123 no).</div>
+
+      <div id="zonaArchivo" class="zona-arrastre zona-archivo">
+        <p><strong id="textoZona">Arrastrá tu archivo .txt acá</strong></p>
+        <p>o usá el botón «Elegir archivo .txt» del menú</p>
+      </div>
+
+      <div id="resultados" class="oculto">
+        <div class="estadisticas">
+          <div class="dato"><strong id="total">0</strong><span>Números leídos</span></div>
+          <div class="dato verde"><strong id="cantUtiles">0</strong><span>Números útiles</span></div>
+          <div class="dato rojo"><strong id="cantNoUtiles">0</strong><span>No útiles</span></div>
+          <div class="dato"><strong id="porcentaje">0%</strong><span>Porcentaje de útiles</span></div>
+        </div>
+
+        <div class="panel">
+          <h3>Números útiles (de menor a mayor)</h3>
+          <ul id="listaUtiles" class="chips"></ul>
+        </div>
+
+        <div id="panelArchivo" class="panel oculto">
+          <h3>Archivo creado</h3>
+          <p class="nombre-archivo" id="nombreArchivo"></p>
+          <p id="textoArchivo"></p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/modules/script.js"></script>
+</body>
+</html>

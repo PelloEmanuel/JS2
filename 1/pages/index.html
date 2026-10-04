@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carga de números</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="menu">
+      <div class="marca"><strong>Práctica JS</strong><span>Proyecto 1</span></div>
+      <p class="menu-titulo">Datos</p>
+      <label for="inputNombre">Tu nombre (identifica el archivo)</label>
+      <input type="text" id="inputNombre" placeholder="Ej: Emanuel Pello" maxlength="30">
+      <label for="inputNumero">Número a cargar</label>
+      <input type="text" id="inputNumero" inputmode="numeric" placeholder="Ej: 525">
+      <div class="botones">
+        <button id="btnAgregar" class="accion">Agregar número</button>
+        <button id="btnFinalizar" disabled>Finalizar y guardar .txt</button>
+        <button id="btnDescargar" disabled>Descargar de nuevo</button>
+        <button id="btnReiniciar" class="secundario">Reiniciar</button>
+      </div>
+      <button id="btnTema" class="tema">Modo oscuro</button>
+    </aside>
+
+    <main class="contenido">
+      <h2 class="titulo-pagina">Carga de números</h2>
+      <div id="mensaje" class="aviso">Escribí tu nombre y cargá entre 10 y 20 números enteros. Cuando llegues a 10 podés finalizar.</div>
+
+      <div class="panel">
+        <h3>Progreso</h3>
+        <div class="conteo">
+          <span id="cantidad" class="numero">0</span>
+          <p>de 20 números cargados (mínimo 10)</p>
+        </div>
+        <div class="barra"><div id="barraProgreso" class="barra-relleno"></div></div>
+      </div>
+
+      <div class="panel">
+        <h3>Números cargados</h3>
+        <ul id="listaNumeros" class="chips"><li class="suave">Todavía no cargaste ninguno.</li></ul>
+      </div>
+
+      <div id="panelArchivo" class="panel oculto">
+        <h3>Archivo creado</h3>
+        <p class="nombre-archivo" id="nombreArchivo"></p>
+        <p id="textoArchivo"></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="/modules/script.js"></script>
+</body>
+</html>

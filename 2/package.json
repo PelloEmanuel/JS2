@@ -1,0 +1,7 @@
+{
+  "name": "filtrar-numeros",
+  "version": "1.0.0",
+  "main": "modules/server.js",
+  "scripts": { "start": "node modules/server.js" },
+  "dependencies": { "express": "^4.19.2" }
+}
